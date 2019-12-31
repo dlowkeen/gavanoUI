@@ -10,6 +10,7 @@ export default class LaunchScreen extends Component {
     return (
       <View style={styles.centered}>
         <Text style={ApplicationStyles.sectionTitle}>Gavano</Text>
+        <Text>Hello World</Text>
       </View>
     );
   }

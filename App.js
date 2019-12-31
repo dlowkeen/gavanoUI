@@ -1,5 +1,5 @@
 import React from 'react';
-import LaunchScreen from './launchscreen';
+import LaunchScreen from './src/components/launchscreen';
 
 const App: () => React$Node = () => {
   return (
