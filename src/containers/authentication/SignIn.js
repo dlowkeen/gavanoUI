@@ -6,28 +6,30 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {GenericInput} from '../../components/ui';
+import {GenericInput, RoundedButton} from '../../components/ui';
+import {ApplicationStyles} from '../../themes';
 
 export default class SignInScreen extends React.Component {
-  state = {email: ''};
+  state = {email: '', password: ''};
 
-  handleEmailChange = email => {
-    this.setState({email});
-  };
+  handleEmailChange = email => this.setState({email});
+  handlePasswordChange = password => this.setState({password});
 
   render() {
     return (
       <View style={styles.container}>
+        <Text style={ApplicationStyles.logoTitle}>Gavano</Text>
         <GenericInput
           onChangeText={this.handleEmailChange}
           value={this.state.email}
           label="Email"
         />
-        <TouchableOpacity
-          style={styles.signInButton}
-          onPress={this._signInAsync}>
-          <Text style={styles.buttonText}>Sign in!</Text>
-        </TouchableOpacity>
+        <GenericInput
+          onChangeText={this.handlePasswordChange}
+          value={this.state.password}
+          label="Password"
+        />
+        <RoundedButton label="Sign In" onPress={this._signInAsync} />
       </View>
     );
   }

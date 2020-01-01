@@ -4,8 +4,10 @@ import {
   AsyncStorage,
   StatusBar,
   StyleSheet,
+  Text,
   View,
 } from 'react-native';
+import {ApplicationStyles} from '../../themes';
 
 export default class AuthLoadingScreen extends React.Component {
   constructor() {
@@ -28,6 +30,7 @@ export default class AuthLoadingScreen extends React.Component {
       <View style={styles.container}>
         <ActivityIndicator />
         <StatusBar barStyle="default" />
+        <Text style={ApplicationStyles.logoTitle}>Gavano</Text>
       </View>
     );
   }

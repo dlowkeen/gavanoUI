@@ -1,3 +1,4 @@
 import {GenericInput} from './inputs';
+import {RoundedButton} from './buttons';
 
-export {GenericInput};
+export {GenericInput, RoundedButton};

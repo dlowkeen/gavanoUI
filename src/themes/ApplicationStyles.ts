@@ -67,16 +67,24 @@ const ApplicationStyles = {
   } as ViewStyle,
   sectionTitle: {
     ...Fonts.style.h4,
-    color: Colors.coal,
+    color: Colors.green,
     backgroundColor: Colors.ricePaper,
     padding: Metrics.smallMargin,
     marginTop: Metrics.smallMargin,
     marginHorizontal: Metrics.baseMargin,
-    borderWidth: 1,
-    borderColor: Colors.ember,
+    // borderWidth: 1,
+    // borderColor: Colors.ember,
     alignItems: 'center',
     textAlign: 'center',
   } as TextStyle,
+  logoTitle: {
+    ...Fonts.style.h1,
+    fontWeight: 'bold',
+    color: Colors.green,
+    padding: Metrics.smallMargin,
+    marginTop: Metrics.smallMargin,
+    marginHorizontal: Metrics.baseMargin,
+  },
 };
 
 export default ApplicationStyles;

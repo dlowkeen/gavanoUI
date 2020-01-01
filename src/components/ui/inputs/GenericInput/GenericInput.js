@@ -20,9 +20,9 @@ const GenericInput = ({onChangeText, label, value}) => {
 const styles = StyleSheet.create({
   input: {
     borderColor: '#CCCCCC',
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
+    borderWidth: 1,
     height: 50,
+    width: 300,
     fontSize: 25,
     paddingLeft: 20,
     paddingRight: 20,
