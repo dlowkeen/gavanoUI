@@ -5,6 +5,8 @@ import Other from '../containers/other/Other';
 import SignIn from '../containers/authentication/SignIn';
 import AuthLoading from '../containers/authentication/AuthLoading';
 import SettingsScreen from '../containers/settings/SettingsScreen';
+import AuthScreen from '../containers/authentication/AuthScreen';
+import JoinScreen from '../containers/authentication/Join';
 import {ROUTES} from '../utilities/constants';
 
 const AppStack = createStackNavigator({
@@ -12,7 +14,11 @@ const AppStack = createStackNavigator({
   [ROUTES.OTHER]: Other,
   [ROUTES.SETTINGS]: SettingsScreen,
 });
-const AuthStack = createStackNavigator({SignIn: SignIn});
+const AuthStack = createStackNavigator({
+  [ROUTES.AUTH]: AuthScreen,
+  [ROUTES.JOIN]: JoinScreen,
+  [ROUTES.SIGNIN]: SignIn,
+});
 
 export default createAppContainer(
   createSwitchNavigator(
