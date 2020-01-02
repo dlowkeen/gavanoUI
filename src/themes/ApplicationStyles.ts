@@ -24,6 +24,9 @@ const ApplicationStyles = {
       flex: 1,
       paddingTop: Metrics.baseMargin,
       backgroundColor: Colors.transparent,
+      alignItems: 'center',
+      justifyContent: 'center',
+      with: '100%',
     } as ViewStyle,
     section: {
       margin: Metrics.section,

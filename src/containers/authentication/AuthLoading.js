@@ -3,11 +3,11 @@ import {
   ActivityIndicator,
   AsyncStorage,
   StatusBar,
-  StyleSheet,
   Text,
   View,
 } from 'react-native';
 import {ApplicationStyles} from '../../themes';
+import {ROUTES} from '../../utilities/constants';
 
 export default class AuthLoadingScreen extends React.Component {
   constructor() {
@@ -21,13 +21,13 @@ export default class AuthLoadingScreen extends React.Component {
 
     // This will switch to the App screen or Auth screen and this loading
     // screen will be unmounted and thrown away.
-    this.props.navigation.navigate(userToken ? 'App' : 'Auth');
+    this.props.navigation.navigate(userToken ? ROUTES.APP : ROUTES.AUTH);
   };
 
   // Render any loading content that you like here
   render() {
     return (
-      <View style={styles.container}>
+      <View style={ApplicationStyles.screen.container}>
         <ActivityIndicator />
         <StatusBar barStyle="default" />
         <Text style={ApplicationStyles.logoTitle}>Gavano</Text>
@@ -35,11 +35,3 @@ export default class AuthLoadingScreen extends React.Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

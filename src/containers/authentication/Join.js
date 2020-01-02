@@ -1,7 +1,8 @@
 import React from 'react';
-import {AsyncStorage, StyleSheet, Text, View} from 'react-native';
+import {AsyncStorage, Text, View} from 'react-native';
 import {GenericInput, RoundedButton} from '../../components/ui';
 import {ApplicationStyles} from '../../themes';
+import {ROUTES} from '../../utilities/constants';
 
 export default class JoinScreen extends React.Component {
   state = {email: '', firstName: '', lastName: '', password: ''};
@@ -13,7 +14,7 @@ export default class JoinScreen extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={ApplicationStyles.screen.container}>
         <Text style={ApplicationStyles.logoTitle}>Gavano</Text>
         <GenericInput
           onChangeText={this.handleFirstNameChange}
@@ -42,15 +43,6 @@ export default class JoinScreen extends React.Component {
 
   _signInAsync = async () => {
     await AsyncStorage.setItem('userToken', 'abc');
-    this.props.navigation.navigate('App');
+    this.props.navigation.navigate(ROUTES.APP);
   };
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%',
-  },
-});

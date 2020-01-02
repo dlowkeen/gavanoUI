@@ -1,12 +1,13 @@
 import React from 'react';
-import {AsyncStorage, StyleSheet, Text, View} from 'react-native';
+import {AsyncStorage, Text, View} from 'react-native';
 import {Button, RoundedButton, TransparentButton} from '../../components/ui';
 import {ApplicationStyles} from '../../themes';
+import {ROUTES} from '../../utilities/constants';
 
 export default class AuthScreen extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View style={ApplicationStyles.screen.container}>
         <Text style={ApplicationStyles.logoTitle}>Gavano</Text>
         <Text style={ApplicationStyles.screen.sectionText}>
           Make your life carbon neutral.
@@ -22,24 +23,15 @@ export default class AuthScreen extends React.Component {
   }
 
   goToJoinNow = () => {
-    this.props.navigation.navigate('Join');
+    this.props.navigation.navigate(ROUTES.JOIN);
   };
 
   goToSignIn = () => {
-    this.props.navigation.navigate('SignIn');
+    this.props.navigation.navigate(ROUTES.SIGNIN);
   };
 
   _signInAsync = async () => {
     await AsyncStorage.setItem('userToken', 'abc');
-    this.props.navigation.navigate('App');
+    this.props.navigation.navigate(ROUTES.APP);
   };
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%',
-  },
-});

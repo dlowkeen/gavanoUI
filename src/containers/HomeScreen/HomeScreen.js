@@ -1,5 +1,6 @@
 import React from 'react';
-import {AsyncStorage, Button, StyleSheet, View} from 'react-native';
+import {AsyncStorage, Button, View} from 'react-native';
+import {ApplicationStyles} from '../../themes';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -8,7 +9,7 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={ApplicationStyles.screen.container}>
         <Button title="Recent Offsets" onPress={this._showMoreApp} />
         <Button title="Settings" onPress={this.goToSettings} />
         <Button title="Sign Out" onPress={this._signOutAsync} />
@@ -29,11 +30,3 @@ export default class HomeScreen extends React.Component {
     this.props.navigation.navigate('Auth');
   };
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

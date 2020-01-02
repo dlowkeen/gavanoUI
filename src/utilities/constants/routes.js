@@ -6,6 +6,7 @@ export const ROUTES = {
   SIGNIN: 'SignIn',
 
   // APPSTACK
+  APP: 'App',
   HOME: 'Home',
   OTHER: 'Other',
   SETTINGS: 'Settings',
