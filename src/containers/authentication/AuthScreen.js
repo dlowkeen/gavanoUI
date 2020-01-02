@@ -1,6 +1,6 @@
 import React from 'react';
 import {AsyncStorage, StyleSheet, Text, View} from 'react-native';
-import {RoundedButton, TransparentButton} from '../../components/ui';
+import {Button, RoundedButton, TransparentButton} from '../../components/ui';
 import {ApplicationStyles} from '../../themes';
 
 export default class AuthScreen extends React.Component {
@@ -16,7 +16,7 @@ export default class AuthScreen extends React.Component {
           label="Join with Google"
           onPress={this._signInAsync}
         />
-        <TransparentButton label="Sign in" onPress={this.goToSignIn} />
+        <Button label="Sign in" onPress={this.goToSignIn} />
       </View>
     );
   }

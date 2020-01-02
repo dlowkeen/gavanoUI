@@ -51,18 +51,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  signInButton: {
-    borderWidth: 1,
-    borderColor: '#007BFF',
-    backgroundColor: '#007BFF',
-    padding: 15,
-    margin: 5,
-    borderRadius: 10,
-  },
-  buttonText: {
-    color: '#FFFFFF',
-    fontSize: 20,
-    textAlign: 'center',
+    width: '100%',
   },
 });

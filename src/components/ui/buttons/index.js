@@ -1,4 +1,5 @@
 import {RoundedButton} from './RoundedButton';
 import {TransparentButton} from './TransparentButton';
+import {Button} from './Button';
 
-export {RoundedButton, TransparentButton};
+export {Button, RoundedButton, TransparentButton};

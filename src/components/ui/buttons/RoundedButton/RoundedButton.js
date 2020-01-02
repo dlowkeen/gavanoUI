@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {Colors} from '../../../../themes';
 
 const RoundedButton = ({disabled = false, onPress, label}) => {
@@ -18,9 +18,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: Colors.green,
     backgroundColor: Colors.green,
-    padding: 15,
+    padding: 5,
     margin: 5,
-    borderRadius: 10,
+    borderRadius: 5,
     width: '80%',
   },
   buttonText: {
