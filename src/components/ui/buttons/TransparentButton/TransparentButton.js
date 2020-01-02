@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {Colors} from '../../../../themes';
 
-const RoundedButton = ({disabled = false, onPress, label}) => {
+const TransparentButton = ({disabled = false, onPress, label}) => {
   return (
     <TouchableOpacity
       disabled={disabled}
@@ -17,17 +17,16 @@ const styles = StyleSheet.create({
   roundedButton: {
     borderWidth: 1,
     borderColor: Colors.green,
-    backgroundColor: Colors.green,
     padding: 15,
     margin: 5,
     borderRadius: 10,
     width: '80%',
   },
   buttonText: {
-    color: '#FFFFFF',
+    color: Colors.green,
     fontSize: 20,
     textAlign: 'center',
   },
 });
 
-export {RoundedButton};
+export {TransparentButton};

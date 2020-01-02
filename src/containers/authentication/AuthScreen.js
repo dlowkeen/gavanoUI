@@ -1,6 +1,6 @@
 import React from 'react';
 import {AsyncStorage, StyleSheet, Text, View} from 'react-native';
-import {RoundedButton} from '../../components/ui';
+import {RoundedButton, TransparentButton} from '../../components/ui';
 import {ApplicationStyles} from '../../themes';
 
 export default class AuthScreen extends React.Component {
@@ -8,9 +8,15 @@ export default class AuthScreen extends React.Component {
     return (
       <View style={styles.container}>
         <Text style={ApplicationStyles.logoTitle}>Gavano</Text>
+        <Text style={ApplicationStyles.screen.sectionText}>
+          Make your life carbon neutral.
+        </Text>
         <RoundedButton label="Join now" onPress={this.goToJoinNow} />
-        <RoundedButton label="Join with Google" onPress={this._signInAsync} />
-        <RoundedButton label="Sign in" onPress={this.goToSignIn} />
+        <TransparentButton
+          label="Join with Google"
+          onPress={this._signInAsync}
+        />
+        <TransparentButton label="Sign in" onPress={this.goToSignIn} />
       </View>
     );
   }
@@ -34,5 +40,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    width: '100%',
   },
 });
