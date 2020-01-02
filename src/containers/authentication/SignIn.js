@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  AsyncStorage,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {AsyncStorage, StyleSheet, Text, View} from 'react-native';
 import {GenericInput, RoundedButton} from '../../components/ui';
 import {ApplicationStyles} from '../../themes';
 
