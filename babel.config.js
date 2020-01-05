@@ -5,7 +5,7 @@ module.exports = function(api) {
     'module:metro-react-native-babel-preset',
     'babel-preset-expo',
   ];
-  const plugins = ['babel-plugin-decorators-legacy'];
+  const plugins = [];
   return {
     presets,
     plugins,
